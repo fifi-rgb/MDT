@@ -1,0 +1,30 @@
+Event Organizer Issues Ticket (NFT):
+├─ Mints NFT with metadata (seat, event, date)
+├─ Sets original price in smart contract
+├─ Defines royalty percentage (e.g., 2% of all future sales)
+└─ Transfers NFT to original buyer's wallet
+
+Seller Lists Ticket:
+├─ Calls listTicket(tokenId, price) on smart contract
+├─ Contract checks: owns ticket, not already listed, price not too high
+├─ Contract emits "TicketListed" event
+└─ Your website displays listing (reads from blockchain)
+
+Buyer Purchases:
+├─ Calls buyTicket(tokenId) with payment
+├─ Smart contract executes atomic swap:
+│   ├─ Validates buyer has enough funds
+│   ├─ Transfers payment to seller (minus fees/royalties)
+│   ├─ Transfers NFT to buyer's wallet
+│   ├─ Invalidates old listing
+│   └─ Records transfer in history
+└─ All happens in single transaction - cannot fail partially
+
+Venue Entry:
+├─ Buyer shows QR code (generated from NFT in wallet)
+├─ Venue scanner validates:
+│   ├─ Reads NFT token ID from QR
+│   ├─ Checks blockchain: does this wallet own this NFT?
+│   ├─ Checks: has it been redeemed already?
+│   └─ Marks NFT as "redeemed" on blockchain
+└─ Entry granted
