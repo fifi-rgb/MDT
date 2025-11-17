@@ -113,7 +113,7 @@ function App() {
                 <Ticket className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Authieticket
+                Encore
               </span>
             </div>
 
@@ -329,7 +329,7 @@ function App() {
       {/* How It Works Section */}
       <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">How Authieticket Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">How Encore Works</h2>
           <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
             Simple, secure, and transparent ticket marketplace for everyone
           </p>
@@ -416,7 +416,7 @@ function App() {
                 <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-2 rounded-lg">
                   <Ticket className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">Authieticket</span>
+                <span className="text-xl font-bold">Encore</span>
               </div>
               <p className="text-gray-400 text-sm">
                 The future of event ticketing. Secure, transparent, and authentic.
@@ -456,7 +456,7 @@ function App() {
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-400">
-              © 2025 Authieticket. All rights reserved.
+              © 2025 Encore. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="text-gray-400 hover:text-white transition">Twitter</a>

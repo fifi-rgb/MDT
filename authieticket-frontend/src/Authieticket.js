@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function AuthieticketFrontend() {
+function EncoreFrontend() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,4 +22,4 @@ function AuthieticketFrontend() {
   );
 }
 
-export default AuthieticketFrontend;
+export default EncoreFrontend;
