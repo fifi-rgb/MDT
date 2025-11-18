@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Wallet, User, ShoppingCart, Menu, X, Ticket, TrendingUp, Shield, Zap, ChevronRight, Star, MapPin, Calendar, Clock, Heart, Filter, SlidersHorizontal } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
-  const [selectedTicket, setSelectedTicket] = useState(null);
 
   const featuredEvents = [
     {
@@ -249,13 +250,14 @@ function App() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredEvents.map((event) => (
-              <div 
+              <Link
+                to={`/ticket/${event.id}`}
                 key={event.id}
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer overflow-hidden group"
-                onClick={() => setSelectedTicket(event)}
+                style={{ textDecoration: 'none' }}
               >
                 {/* Event Image */}
-                <div 
+                <div
                   className="h-48 relative"
                   style={{ background: event.image }}
                 >
@@ -266,8 +268,8 @@ function App() {
                   </div>
                   <div className="absolute bottom-3 left-3">
                     <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                      event.type === 'NFT' 
-                        ? 'bg-purple-600 text-white' 
+                      event.type === 'NFT'
+                        ? 'bg-purple-600 text-white'
                         : 'bg-blue-600 text-white'
                     }`}>
                       {event.type}
@@ -280,7 +282,7 @@ function App() {
                   <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-purple-600 transition">
                     {event.name}
                   </h3>
-                  
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Calendar className="w-4 h-4" />
@@ -315,12 +317,10 @@ function App() {
                       <p className="text-xs text-gray-500 line-through">${event.originalPrice}</p>
                       <p className="text-2xl font-bold text-purple-600">${event.price}</p>
                     </div>
-                    <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium">
-                      Buy Now
-                    </button>
+                    <span className="px-4 py-2 bg-purple-600 text-white rounded-lg font-medium">Buy Now</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -454,6 +454,7 @@ function App() {
             </div>
           </div>
 
+
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-400">
               © 2025 Encore. All rights reserved.
@@ -466,95 +467,6 @@ function App() {
           </div>
         </div>
       </footer>
-
-      {/* Ticket Detail Modal */}
-      {selectedTicket && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
-          onClick={() => setSelectedTicket(null)}
-        >
-          <div 
-            className="bg-white rounded-2xl max-w-2xl w-full max-h-screen overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div 
-              className="h-64 relative"
-              style={{ background: selectedTicket.image }}
-            >
-              <button 
-                className="absolute top-4 right-4 p-2 bg-white rounded-full hover:bg-gray-100"
-                onClick={() => setSelectedTicket(null)}
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-            
-            <div className="p-8">
-              <div className="flex items-start justify-between mb-6">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">{selectedTicket.name}</h2>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${
-                    selectedTicket.type === 'NFT' 
-                      ? 'bg-purple-100 text-purple-600' 
-                      : 'bg-blue-100 text-blue-600'
-                  }`}>
-                    {selectedTicket.type} Ticket
-                  </span>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm text-gray-500 line-through">${selectedTicket.originalPrice}</p>
-                  <p className="text-4xl font-bold text-purple-600">${selectedTicket.price}</p>
-                </div>
-              </div>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-3 text-gray-700">
-                  <Calendar className="w-5 h-5 text-purple-600" />
-                  <span className="font-medium">{selectedTicket.date} at {selectedTicket.time}</span>
-                </div>
-                <div className="flex items-center gap-3 text-gray-700">
-                  <MapPin className="w-5 h-5 text-purple-600" />
-                  <span className="font-medium">{selectedTicket.venue}</span>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                <h3 className="font-bold text-gray-900 mb-3">Seller Information</h3>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <div>
-                      <p className="font-medium text-gray-900">{selectedTicket.seller}</p>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-600">{selectedTicket.rating} rating</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
-                    View Profile
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <button className="flex-1 px-6 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-bold text-lg">
-                  Purchase Ticket
-                </button>
-                <button className="px-6 py-4 border-2 border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition font-bold">
-                  <Heart className="w-6 h-6" />
-                </button>
-              </div>
-
-              <p className="text-center text-sm text-gray-500 mt-4">
-                <Shield className="w-4 h-4 inline mr-1" />
-                Secure payment • Buyer protection included
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
     </div>
   );
 }
