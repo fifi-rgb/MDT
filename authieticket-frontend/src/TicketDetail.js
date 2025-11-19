@@ -6,41 +6,41 @@ import { Calendar, Clock, MapPin, Star, Shield, Heart, TrendingDown, TrendingUp,
 const EVENTS = [
   {
     id: 1,
-    name: "Summer Music Festival 2025",
-    image: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    name: "Taylor Swift | The Eras Tour",
+    image: "https://variety.com/wp-content/uploads/2023/08/Screenshot-2023-08-03-at-7.16.55-AM.png?w=1022",
     date: "Jul 15, 2025",
-    time: "6:00 PM",
+    time: "7:00 PM",
     venue: "My Dinh National Stadium, Hanoi, Vietnam",
-    description: "The biggest music festival in Southeast Asia featuring international and local artists. Experience 3 stages, 50+ artists, and unforgettable performances across multiple genres.",
+    description: "Experience the biggest pop phenomenon of our generation as Taylor Swift brings The Eras Tour to Vietnam! A spectacular 3-hour journey through all her iconic albums with stunning visuals and production.",
     categories: [
-      { type: "General Admission", price: 89.99, originalPrice: 99.99, available: 156, totalListings: 12 },
-      { type: "VIP Section", price: 199.99, originalPrice: 249.99, available: 45, totalListings: 8 },
-      { type: "Premium Lounge", price: 399.99, originalPrice: 450.00, available: 12, totalListings: 3 }
+      { type: "General Admission", price: 189.99, originalPrice: 220.00, available: 156, totalListings: 12 },
+      { type: "VIP Section", price: 399.99, originalPrice: 480.00, available: 45, totalListings: 8 },
+      { type: "Premium Lounge", price: 799.99, originalPrice: 950.00, available: 12, totalListings: 3 }
     ],
     sellers: [
-      { id: 1, name: "0x742d...89aB", rating: 4.8, sales: 234, ticketsListed: 5, lowestPrice: 89.99 },
-      { id: 2, name: "0x8bc3...f2a1", rating: 4.9, sales: 189, ticketsListed: 3, lowestPrice: 95.00 },
-      { id: 3, name: "0x9a21...c4d8", rating: 4.7, sales: 156, ticketsListed: 4, lowestPrice: 92.50 }
+      { id: 1, name: "0x742d...89aB", rating: 4.8, sales: 234, ticketsListed: 5, lowestPrice: 189.99 },
+      { id: 2, name: "0x8bc3...f2a1", rating: 4.9, sales: 189, ticketsListed: 3, lowestPrice: 195.00 },
+      { id: 3, name: "0x9a21...c4d8", rating: 4.7, sales: 156, ticketsListed: 4, lowestPrice: 199.50 }
     ],
     priceHistory: [
-      { date: "Oct 18", avgPrice: 120 },
-      { date: "Oct 25", avgPrice: 115 },
-      { date: "Nov 1", avgPrice: 108 },
-      { date: "Nov 8", avgPrice: 102 },
-      { date: "Nov 15", avgPrice: 95 },
-      { date: "Nov 19", avgPrice: 89.99 }
+      { date: "Oct 18", avgPrice: 260 },
+      { date: "Oct 25", avgPrice: 245 },
+      { date: "Nov 1", avgPrice: 225 },
+      { date: "Nov 8", avgPrice: 210 },
+      { date: "Nov 15", avgPrice: 200 },
+      { date: "Nov 19", avgPrice: 189.99 }
     ],
     type: "NFT",
     category: "Music"
   },
   {
     id: 2,
-    name: "Tech Conference 2025",
-    image: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    name: "Web Summit Asia 2025",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
     date: "Aug 22, 2025",
     time: "9:00 AM",
     venue: "Marina Bay Sands Expo, Singapore",
-    description: "Join industry leaders and innovators for 3 days of cutting-edge tech talks, workshops, and networking. Topics include AI, blockchain, cloud computing, and more.",
+    description: "Join industry leaders and innovators for 3 days of cutting-edge tech talks, workshops, and networking. Topics include AI, blockchain, Web3, cloud computing, and the future of technology in Asia.",
     categories: [
       { type: "Standard Pass", price: 299.00, originalPrice: 350.00, available: 89, totalListings: 15 },
       { type: "Premium Pass", price: 599.00, originalPrice: 699.00, available: 34, totalListings: 7 },
@@ -64,12 +64,12 @@ const EVENTS = [
   },
   {
     id: 3,
-    name: "NBA Finals Game 5",
-    image: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    name: "NBA Asia Games 2025",
+    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
     date: "Jun 10, 2025",
     time: "8:00 PM",
     venue: "Impact Arena, Bangkok, Thailand",
-    description: "Witness basketball history as the world's best teams compete in the championship finals. Premium seating with excellent views of the court.",
+    description: "Witness basketball history as NBA superstars compete in the highly anticipated Asia Games. Premium seating with excellent views of the court and exclusive fan experiences.",
     categories: [
       { type: "Upper Bowl", price: 450.00, originalPrice: 500.00, available: 78, totalListings: 18 },
       { type: "Lower Bowl", price: 850.00, originalPrice: 950.00, available: 42, totalListings: 12 },
@@ -77,7 +77,7 @@ const EVENTS = [
     ],
     sellers: [
       { id: 1, name: "0x8f3a...12cD", rating: 5.0, sales: 456, ticketsListed: 8, lowestPrice: 450.00 },
-      { id: 2, name: "stubhub", rating: 4.8, sales: 2340, ticketsListed: 15, lowestPrice: 465.00 },
+      { id: 2, name: "livenation", rating: 4.8, sales: 2340, ticketsListed: 15, lowestPrice: 465.00 },
       { id: 3, name: "0x3d9b...e5f2", rating: 4.9, sales: 189, ticketsListed: 7, lowestPrice: 475.00 }
     ],
     priceHistory: [
@@ -93,12 +93,12 @@ const EVENTS = [
   },
   {
     id: 4,
-    name: "Broadway: Hamilton",
-    image: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    name: "Wicked: The Musical",
+    image: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&h=600&fit=crop",
     date: "Jul 8, 2025",
     time: "7:30 PM",
     venue: "Esplanade – Theatres on the Bay, Singapore",
-    description: "The award-winning Broadway musical comes to Singapore! Experience the story of America's founding father through hip-hop, jazz, and R&B.",
+    description: "The beloved Broadway sensation arrives in Singapore! Follow the untold story of the Witches of Oz through spectacular songs, stunning visuals, and unforgettable performances.",
     categories: [
       { type: "Balcony", price: 175.00, originalPrice: 200.00, available: 92, totalListings: 14 },
       { type: "Orchestra", price: 325.00, originalPrice: 375.00, available: 38, totalListings: 9 },
@@ -122,58 +122,58 @@ const EVENTS = [
   },
   {
     id: 5,
-    name: "EDM Night: Afterlife",
-    image: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
+    name: "Martin Garrix Live in Concert",
+    image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop",
     date: "Aug 5, 2025",
-    time: "10:00 PM",
-    venue: "Saigon Opera House, Ho Chi Minh City, Vietnam",
-    description: "An electrifying night of electronic dance music featuring world-renowned DJs. State-of-the-art sound system and mesmerizing light shows await.",
+    time: "9:00 PM",
+    venue: "Saigon Exhibition Center, Ho Chi Minh City, Vietnam",
+    description: "The world's #1 DJ brings his electrifying live show to Vietnam! Experience chart-topping hits, incredible visuals, and an unforgettable night of electronic dance music.",
     categories: [
-      { type: "General Admission", price: 65.00, originalPrice: 75.00, available: 245, totalListings: 22 },
-      { type: "VIP Table (4 ppl)", price: 450.00, originalPrice: 500.00, available: 12, totalListings: 5 },
-      { type: "Backstage Pass", price: 250.00, originalPrice: 300.00, available: 8, totalListings: 3 }
+      { type: "General Admission", price: 85.00, originalPrice: 95.00, available: 245, totalListings: 22 },
+      { type: "VIP Table (4 ppl)", price: 550.00, originalPrice: 600.00, available: 12, totalListings: 5 },
+      { type: "Backstage Pass", price: 350.00, originalPrice: 400.00, available: 8, totalListings: 3 }
     ],
     sellers: [
-      { id: 1, name: "0x9bc2...45eF", rating: 4.6, sales: 312, ticketsListed: 18, lowestPrice: 65.00 },
-      { id: 2, name: "0x7e41...b9c8", rating: 4.7, sales: 201, ticketsListed: 9, lowestPrice: 68.00 },
-      { id: 3, name: "resident-advisor", rating: 4.8, sales: 1560, ticketsListed: 25, lowestPrice: 70.00 }
+      { id: 1, name: "0x9bc2...45eF", rating: 4.6, sales: 312, ticketsListed: 18, lowestPrice: 85.00 },
+      { id: 2, name: "0x7e41...b9c8", rating: 4.7, sales: 201, ticketsListed: 9, lowestPrice: 88.00 },
+      { id: 3, name: "resident-advisor", rating: 4.8, sales: 1560, ticketsListed: 25, lowestPrice: 90.00 }
     ],
     priceHistory: [
-      { date: "Oct 18", avgPrice: 88 },
-      { date: "Oct 25", avgPrice: 82 },
-      { date: "Nov 1", avgPrice: 78 },
-      { date: "Nov 8", avgPrice: 73 },
-      { date: "Nov 15", avgPrice: 69 },
-      { date: "Nov 19", avgPrice: 65 }
+      { date: "Oct 18", avgPrice: 112 },
+      { date: "Oct 25", avgPrice: 105 },
+      { date: "Nov 1", avgPrice: 98 },
+      { date: "Nov 8", avgPrice: 92 },
+      { date: "Nov 15", avgPrice: 88 },
+      { date: "Nov 19", avgPrice: 85 }
     ],
     type: "NFT",
     category: "Music"
   },
   {
     id: 6,
-    name: "Stand-up Comedy Night",
-    image: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+    name: "Kevin Hart: Reality Check Tour",
+    image: "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=800&h=600&fit=crop",
     date: "Jul 20, 2025",
     time: "8:00 PM",
     venue: "Thailand Cultural Centre, Bangkok, Thailand",
-    description: "Laugh out loud with top international comedians performing their best material. An intimate evening of comedy featuring multiple acts.",
+    description: "Comedy superstar Kevin Hart brings his hilarious Reality Check Tour to Bangkok! Experience non-stop laughs from one of the world's most successful comedians in an intimate theater setting.",
     categories: [
-      { type: "Standard Seating", price: 42.00, originalPrice: 45.00, available: 178, totalListings: 16 },
-      { type: "Premium Front Row", price: 85.00, originalPrice: 95.00, available: 24, totalListings: 6 },
-      { type: "VIP Meet & Greet", price: 150.00, originalPrice: 175.00, available: 10, totalListings: 2 }
+      { type: "Standard Seating", price: 75.00, originalPrice: 85.00, available: 178, totalListings: 16 },
+      { type: "Premium Front Row", price: 150.00, originalPrice: 175.00, available: 24, totalListings: 6 },
+      { type: "VIP Meet & Greet", price: 350.00, originalPrice: 400.00, available: 10, totalListings: 2 }
     ],
     sellers: [
-      { id: 1, name: "eventbrite", rating: 4.5, sales: 890, ticketsListed: 42, lowestPrice: 42.00 },
-      { id: 2, name: "0x6d92...f3a5", rating: 4.6, sales: 145, ticketsListed: 8, lowestPrice: 44.00 },
-      { id: 3, name: "ticketmelon", rating: 4.7, sales: 567, ticketsListed: 14, lowestPrice: 45.00 }
+      { id: 1, name: "eventbrite", rating: 4.5, sales: 890, ticketsListed: 42, lowestPrice: 75.00 },
+      { id: 2, name: "0x6d92...f3a5", rating: 4.6, sales: 145, ticketsListed: 8, lowestPrice: 78.00 },
+      { id: 3, name: "ticketmelon", rating: 4.7, sales: 567, ticketsListed: 14, lowestPrice: 80.00 }
     ],
     priceHistory: [
-      { date: "Oct 18", avgPrice: 52 },
-      { date: "Oct 25", avgPrice: 50 },
-      { date: "Nov 1", avgPrice: 48 },
-      { date: "Nov 8", avgPrice: 46 },
-      { date: "Nov 15", avgPrice: 44 },
-      { date: "Nov 19", avgPrice: 42 }
+      { date: "Oct 18", avgPrice: 98 },
+      { date: "Oct 25", avgPrice: 92 },
+      { date: "Nov 1", avgPrice: 88 },
+      { date: "Nov 8", avgPrice: 82 },
+      { date: "Nov 15", avgPrice: 78 },
+      { date: "Nov 19", avgPrice: 75 }
     ],
     type: "Traditional",
     category: "Comedy"
@@ -206,7 +206,7 @@ export default function TicketDetail() {
           <div className="lg:col-span-2 space-y-6">
             {/* Event Header */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="h-80 relative" style={{ background: event.image }}>
+              <div className="h-80 relative bg-cover bg-center" style={{ backgroundImage: `url(${event.image})` }}>
                 <span className={`absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-bold ${event.type === 'NFT' ? 'bg-purple-600 text-white' : 'bg-blue-600 text-white'}`}>
                   {event.type} Ticket
                 </span>

@@ -11,13 +11,13 @@ function App() {
   const featuredEvents = [
     {
       id: 1,
-      name: "Summer Music Festival 2025",
-      image: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      name: "Taylor Swift | The Eras Tour",
+      image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&h=600&fit=crop",
       date: "Jul 15, 2025",
-      time: "6:00 PM",
+      time: "7:00 PM",
       venue: "My Dinh National Stadium, Hanoi, Vietnam",
-      price: 89.99,
-      originalPrice: 99.99,
+      price: 189.99,
+      originalPrice: 220.00,
       type: "NFT",
       seller: "0x742d...89aB",
       rating: 4.8,
@@ -25,8 +25,8 @@ function App() {
     },
     {
       id: 2,
-      name: "Tech Conference 2025",
-      image: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      name: "Web Summit Asia 2025",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
       date: "Aug 22, 2025",
       time: "9:00 AM",
       venue: "Marina Bay Sands Expo, Singapore",
@@ -39,8 +39,8 @@ function App() {
     },
     {
       id: 3,
-      name: "NBA Finals Game 5",
-      image: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      name: "NBA Asia Games 2025",
+      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
       date: "Jun 10, 2025",
       time: "8:00 PM",
       venue: "Impact Arena, Bangkok, Thailand",
@@ -53,8 +53,8 @@ function App() {
     },
     {
       id: 4,
-      name: "Broadway: Hamilton",
-      image: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+      name: "Wicked: The Musical",
+      image: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&h=600&fit=crop",
       date: "Jul 8, 2025",
       time: "7:30 PM",
       venue: "Esplanade – Theatres on the Bay, Singapore",
@@ -67,13 +67,13 @@ function App() {
     },
     {
       id: 5,
-      name: "EDM Night: Afterlife",
-      image: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
+      name: "Martin Garrix Live in Concert",
+      image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop",
       date: "Aug 5, 2025",
-      time: "10:00 PM",
-      venue: "Saigon Opera House, Ho Chi Minh City, Vietnam",
-      price: 65.00,
-      originalPrice: 75.00,
+      time: "9:00 PM",
+      venue: "Saigon Exhibition Center, Ho Chi Minh City, Vietnam",
+      price: 85.00,
+      originalPrice: 95.00,
       type: "NFT",
       seller: "0x9bc2...45eF",
       rating: 4.6,
@@ -81,13 +81,13 @@ function App() {
     },
     {
       id: 6,
-      name: "Stand-up Comedy Night",
-      image: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+      name: "Kevin Hart: Reality Check Tour",
+      image: "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=800&h=600&fit=crop",
       date: "Jul 20, 2025",
       time: "8:00 PM",
       venue: "Thailand Cultural Centre, Bangkok, Thailand",
-      price: 42.00,
-      originalPrice: 45.00,
+      price: 75.00,
+      originalPrice: 85.00,
       type: "Traditional",
       seller: "eventbrite",
       rating: 4.5,
@@ -300,8 +300,8 @@ function App() {
               >
                 {/* Event Image */}
                 <div
-                  className="h-48 relative"
-                  style={{ background: event.image }}
+                  className="h-48 relative bg-cover bg-center"
+                  style={{ backgroundImage: `url(${event.image})` }}
                 >
                   <div className="absolute top-3 right-3">
                     <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition">

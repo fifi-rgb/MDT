@@ -14,7 +14,7 @@ export default function VerificationSuccess() {
 
   const platformLogos = {
     ticketmaster: 'https://www.citypng.com/public/uploads/preview/ticketmaster-tm-logo-png-701751694953dwxoqkgjr.png',
-    stubhub: 'https://www.stubhub.com/presskit/stubhub-logo-dark.svg',
+    livenation: 'https://www.livenation.com/static/images/ln-logo.svg',
     eventbrite: 'https://cdn.worldvectorlogo.com/logos/eventbrite-1.svg',
     nft: 'https://cryptologos.cc/logos/ethereum-eth-logo.png'
   };

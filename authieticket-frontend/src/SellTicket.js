@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Upload, Ticket, DollarSign, Hash, Users, Shield, CheckCircle, AlertCircle } from 'lucide-react';
 
 const platforms = [
-  { id: 'ticketmaster', name: 'Ticketmaster', logo: 'https://www.citypng.com/public/uploads/preview/ticketmaster-tm-logo-png-701751694953dwxoqkgjr.png' },
-  { id: 'stubhub', name: 'StubHub', logo: 'https://www.stubhub.com/presskit/stubhub-logo-dark.svg' },
+  { id: 'ticketmaster', name: 'Ticketmaster', logo: 'https://logos-world.net/wp-content/uploads/2021/03/Ticketmaster-Logo.png' },
+  { id: 'livenation', name: 'Live Nation', logo: 'https://www.livenation.com/static/images/ln-logo.svg' },
   { id: 'eventbrite', name: 'Eventbrite', logo: 'https://cdn.worldvectorlogo.com/logos/eventbrite-1.svg' },
   { id: 'nft', name: 'NFT Wallet', logo: 'https://cryptologos.cc/logos/ethereum-eth-logo.png' }
 ];
