@@ -6,6 +6,7 @@ import { Search, Wallet, User, ShoppingCart, Menu, X, Ticket, TrendingUp, Shield
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const featuredEvents = [
     {
@@ -96,9 +97,19 @@ function App() {
 
   const categories = ['All', 'Music', 'Sports', 'Theater', 'Conference', 'Comedy'];
 
-  const filteredEvents = activeTab === 'all' 
-    ? featuredEvents 
-    : featuredEvents.filter(e => e.category.toLowerCase() === activeTab);
+  const filteredEvents = featuredEvents
+    .filter(e => {
+      // Filter by category tab
+      const matchesCategory = activeTab === 'all' || e.category.toLowerCase() === activeTab;
+      
+      // Filter by search query (name, venue, category)
+      const matchesSearch = searchQuery === '' || 
+        e.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        e.venue.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        e.category.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      return matchesCategory && matchesSearch;
+    });
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -121,7 +132,7 @@ function App() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               <a href="#" className="text-gray-700 hover:text-purple-600 font-medium transition">Marketplace</a>
-              <a href="#" className="text-gray-700 hover:text-purple-600 font-medium transition">Sell Tickets</a>
+              <Link to="/sell-ticket" className="text-gray-700 hover:text-purple-600 font-medium transition">Sell Tickets</Link>
               <a href="#" className="text-gray-700 hover:text-purple-600 font-medium transition">How It Works</a>
               <a href="#" className="text-gray-700 hover:text-purple-600 font-medium transition">About</a>
             </nav>
@@ -154,7 +165,7 @@ function App() {
             <div className="md:hidden py-4 border-t">
               <nav className="flex flex-col gap-4">
                 <a href="#" className="text-gray-700 hover:text-purple-600 font-medium">Marketplace</a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 font-medium">Sell Tickets</a>
+                <Link to="/sell-ticket" className="text-gray-700 hover:text-purple-600 font-medium">Sell Tickets</Link>
                 <a href="#" className="text-gray-700 hover:text-purple-600 font-medium">How It Works</a>
                 <a href="#" className="text-gray-700 hover:text-purple-600 font-medium">About</a>
                 <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium justify-center">
@@ -185,10 +196,17 @@ function App() {
                 type="text" 
                 placeholder="Search events, artists, venues..." 
                 className="flex-1 px-2 py-3 outline-none text-gray-800"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition font-medium">
-                Search
-              </button>
+              {searchQuery && (
+                <button 
+                  onClick={() => setSearchQuery('')}
+                  className="text-gray-400 hover:text-gray-600 transition px-2"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
             </div>
 
             {/* Trust Badges */}
@@ -241,15 +259,39 @@ function App() {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Featured Events</h2>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900">Featured Events</h2>
+              {searchQuery && (
+                <p className="text-sm text-gray-600 mt-1">
+                  {filteredEvents.length} result{filteredEvents.length !== 1 ? 's' : ''} for "{searchQuery}"
+                </p>
+              )}
+            </div>
             <a href="#" className="flex items-center gap-1 text-purple-600 hover:text-purple-700 font-medium">
               View All
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredEvents.map((event) => (
+          {filteredEvents.length === 0 ? (
+            <div className="col-span-full text-center py-16">
+              <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">No events found</h3>
+              <p className="text-gray-600 mb-4">
+                {searchQuery ? `No events match "${searchQuery}"` : 'No events available in this category'}
+              </p>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium"
+                >
+                  Clear Search
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredEvents.map((event) => (
               <Link
                 to={`/ticket/${event.id}`}
                 key={event.id}
@@ -321,8 +363,9 @@ function App() {
                   </div>
                 </div>
               </Link>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -427,7 +470,7 @@ function App() {
               <h4 className="font-bold mb-4">Marketplace</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition">Browse Events</a></li>
-                <li><a href="#" className="hover:text-white transition">Sell Tickets</a></li>
+                <li><Link to="/sell-ticket" className="hover:text-white transition">Sell Tickets</Link></li>
                 <li><a href="#" className="hover:text-white transition">NFT Tickets</a></li>
                 <li><a href="#" className="hover:text-white transition">Verified Sellers</a></li>
               </ul>
