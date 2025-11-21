@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Ticket, CheckCircle, Wallet, Download, ArrowRight, QrCode, Receipt } from 'lucide-react';
 
 function PurchaseSuccess() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
