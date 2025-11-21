@@ -153,12 +153,12 @@ export default function VerificationSuccess() {
                   <span className="font-bold">${formData.price}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Platform Fee (5%)</span>
-                  <span className="font-bold text-red-600">-${(formData.price * 0.05).toFixed(2)}</span>
+                  <span className="text-gray-600">Platform Fee (13%)</span>
+                  <span className="font-bold text-red-600">-${(formData.price * 0.13).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between pt-2 border-t border-green-300">
                   <span className="font-bold text-lg">You Receive</span>
-                  <span className="font-bold text-2xl text-green-600">${(formData.price * 0.95).toFixed(2)}</span>
+                  <span className="font-bold text-2xl text-green-600">${(formData.price * 0.87).toFixed(2)}</span>
                 </div>
               </div>
             </div>

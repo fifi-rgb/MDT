@@ -224,7 +224,7 @@ function HowItWorks() {
                   <DollarSign className="w-12 h-12 text-green-600 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Get Paid</h3>
                   <p className="text-gray-600">
-                    Once sold, receive payment instantly. Platform takes 5% fee, you keep 95%. Fast and secure.
+                    Once sold, receive payment instantly with competitive platform fees. Fast and secure.
                   </p>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4 text-sm text-gray-700">
@@ -288,7 +288,7 @@ function HowItWorks() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Price Limits</h3>
               <p className="text-gray-600">
-                Fair pricing enforced. NFT tickets have max 110% markup. No price gouging allowed.
+                Fair pricing enforced. NFT tickets have reasonable markup limits. No price gouging allowed.
               </p>
             </div>
           </div>
@@ -318,7 +318,7 @@ function HowItWorks() {
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900 mb-3">What are your fees?</h3>
               <p className="text-gray-600">
-                We charge a 5% platform fee on all sales. Sellers receive 95% of the sale price. For NFT tickets, an additional 2% goes to event organizers as royalties.
+                We charge competitive platform fees on all sales. For NFT tickets, event organizers also receive royalties on resales. All fees are clearly displayed before you complete your transaction.
               </p>
             </div>
 

@@ -386,8 +386,8 @@ export default function SellTicket() {
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-start gap-3">
                   <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-yellow-800">
-                    <p className="font-medium mb-1">Platform Fee: 5%</p>
-                    <p>You will receive ${(formData.price * 0.95).toFixed(2)} after the platform fee (${(formData.price * 0.05).toFixed(2)})</p>
+                    <p className="font-medium mb-1">Platform Fee: 13%</p>
+                    <p>You will receive ${(formData.price * 0.87).toFixed(2)} after the platform fee (${(formData.price * 0.13).toFixed(2)})</p>
                   </div>
                 </div>
 

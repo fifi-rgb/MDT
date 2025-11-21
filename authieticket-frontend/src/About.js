@@ -145,10 +145,6 @@ function About() {
                   <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">PayPal payment processing with buyer protection</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">5% platform fee, seller gets 95%</span>
-                </li>
               </ul>
             </div>
 
@@ -163,11 +159,11 @@ function About() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Smart contracts enforce max 110% markup</span>
+                  <span className="text-gray-700">Smart contracts enforce fair pricing limits</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Automatic payment splits: 5% platform, 2% organizer royalty</span>
+                  <span className="text-gray-700">Automatic payment distribution to all parties</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
@@ -175,7 +171,7 @@ function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Unlimited resales with perpetual organizer royalties</span>
+                  <span className="text-gray-700">Unlimited resales with organizer royalties</span>
                 </li>
               </ul>
             </div>
