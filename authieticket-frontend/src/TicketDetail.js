@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { Calendar, Clock, MapPin, Star, Shield, Heart, TrendingDown, TrendingUp, Users, Info } from "lucide-react";
 
 // Hardcoded event data for demo with enhanced details
@@ -381,14 +381,20 @@ export default function TicketDetail() {
               </div>
               
               <div className="space-y-4 mb-6">
-                <button className="w-full px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-bold text-lg flex items-center justify-center gap-2">
+                <Link 
+                  to="/purchase-success"
+                  className="w-full px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-bold text-lg flex items-center justify-center gap-2"
+                >
                   <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" className="w-6 h-6" />
                   Pay with PayPal
-                </button>
-                <button className="w-full px-6 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-bold text-lg flex items-center justify-center gap-2">
+                </Link>
+                <Link
+                  to="/purchase-success"
+                  className="w-full px-6 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-bold text-lg flex items-center justify-center gap-2"
+                >
                   <img src="https://cdn.iconscout.com/icon/free/png-256/free-coinbase-logo-icon-svg-download-png-7651204.png" alt="Coinbase" className="w-6 h-6" />
                   Pay with Coinbase
-                </button>
+                </Link>
               </div>
 
               <div className="border-t pt-6 space-y-4">
