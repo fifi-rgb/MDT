@@ -22,7 +22,7 @@ script_name = "cf-ai-authieticket"
 # Durable Objects migrations
 [[migrations]]
 tag = "v1"
-new_classes = ["TicketAssistant"]
+new_sqlite_classes = ["TicketAssistant"]
 
 # D1 Database for ticket data
 [[d1_databases]]
