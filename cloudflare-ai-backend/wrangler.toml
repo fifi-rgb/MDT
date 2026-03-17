@@ -1,4 +1,4 @@
-name = "authieticket-ai-backend"
+name = "cf-ai-authieticket"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
@@ -17,7 +17,7 @@ preview_id = "fb9b7c18fded46be886b878bd81aba97"
 [[durable_objects.bindings]]
 name = "TICKET_ASSISTANT"
 class_name = "TicketAssistant"
-script_name = "authieticket-ai-backend"
+script_name = "cf-ai-authieticket"
 
 # Durable Objects migrations
 [[migrations]]
@@ -42,4 +42,4 @@ ENVIRONMENT = "development"
 
 # CORS configuration
 [env.production]
-name = "authieticket-ai-backend-production"
+name = "cf-ai-authieticket-production"
