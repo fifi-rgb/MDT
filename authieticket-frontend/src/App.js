@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Wallet, User, ShoppingCart, Menu, X, Ticket, TrendingUp, Shield, Zap, ChevronRight, Star, MapPin, Calendar, Clock, Heart, Filter, SlidersHorizontal } from 'lucide-react';
+import { Search, Wallet, User, ShoppingCart, Menu, X, Ticket, TrendingUp, Shield, Zap, ChevronRight, Star, MapPin, Calendar, Clock, Heart, SlidersHorizontal } from 'lucide-react';
 import AIChatAssistant from './components/AIChatAssistant';
 
 function App() {
@@ -268,10 +268,10 @@ function App() {
                 </p>
               )}
             </div>
-            <a href="#" className="flex items-center gap-1 text-purple-600 hover:text-purple-700 font-medium">
+            <button onClick={() => setActiveTab('all')} className="flex items-center gap-1 text-purple-600 hover:text-purple-700 font-medium">
               View All
               <ChevronRight className="w-4 h-4" />
-            </a>
+            </button>
           </div>
 
           {filteredEvents.length === 0 ? (
@@ -470,30 +470,30 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Marketplace</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Browse Events</a></li>
+                <li><Link to="/" className="hover:text-white transition">Browse Events</Link></li>
                 <li><Link to="/sell-ticket" className="hover:text-white transition">Sell Tickets</Link></li>
-                <li><a href="#" className="hover:text-white transition">NFT Tickets</a></li>
-                <li><a href="#" className="hover:text-white transition">Verified Sellers</a></li>
+                <li><button className="hover:text-white transition text-left">NFT Tickets</button></li>
+                <li><button className="hover:text-white transition text-left">Verified Sellers</button></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition">How It Works</a></li>
-                <li><a href="#" className="hover:text-white transition">Security</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact</a></li>
+                <li><Link to="/about" className="hover:text-white transition">About Us</Link></li>
+                <li><Link to="/how-it-works" className="hover:text-white transition">How It Works</Link></li>
+                <li><button className="hover:text-white transition text-left">Security</button></li>
+                <li><button className="hover:text-white transition text-left">Contact</button></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition">Cookie Policy</a></li>
-                <li><a href="#" className="hover:text-white transition">Refund Policy</a></li>
+                <li><button className="hover:text-white transition text-left">Terms of Service</button></li>
+                <li><button className="hover:text-white transition text-left">Privacy Policy</button></li>
+                <li><button className="hover:text-white transition text-left">Cookie Policy</button></li>
+                <li><button className="hover:text-white transition text-left">Refund Policy</button></li>
               </ul>
             </div>
           </div>
@@ -504,9 +504,9 @@ function App() {
               © 2025 Encore. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition">Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-white transition">Discord</a>
-              <a href="#" className="text-gray-400 hover:text-white transition">GitHub</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Twitter</a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Discord</a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">GitHub</a>
             </div>
           </div>
         </div>

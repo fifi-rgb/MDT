@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Ticket, Upload, Shield, CreditCard, Check, Zap, Users, TrendingUp, ArrowRight, Search, DollarSign, Lock } from 'lucide-react';
+import { Ticket, Upload, Shield, CreditCard, Check, Users, TrendingUp, ArrowRight, Search, DollarSign, Lock } from 'lucide-react';
 
 function HowItWorks() {
   return (
