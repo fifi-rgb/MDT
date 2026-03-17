@@ -29,6 +29,22 @@ export default {
     try {
       // Route to appropriate handler
       switch (url.pathname) {
+        case '/':
+          return new Response(JSON.stringify({ 
+            name: 'Authieticket AI Backend',
+            version: '1.0.0',
+            status: 'operational',
+            endpoints: {
+              health: '/api/health',
+              chat: '/api/chat (POST)',
+              validateTicket: '/api/validate-ticket (POST)',
+              voice: '/api/voice (POST)'
+            },
+            documentation: 'See README.md for API usage'
+          }), {
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+          });
+        
         case '/api/chat':
           return await handleChatRequest(request, env, ctx, corsHeaders);
         
