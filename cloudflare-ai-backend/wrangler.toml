@@ -39,9 +39,6 @@ database_id = "9071d7a2-7572-4692-b381-1cde991aeccc"
 [vars]
 ENVIRONMENT = "development"
 
-[build]
-command = ""
-
 # CORS configuration
 [env.production]
 name = "authieticket-ai-backend-production"
