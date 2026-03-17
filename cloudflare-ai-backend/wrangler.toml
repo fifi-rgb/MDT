@@ -1,0 +1,47 @@
+name = "authieticket-ai-backend"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Workers AI Binding
+[ai]
+binding = "AI"
+
+# KV Namespace for conversation history
+[[kv_namespaces]]
+binding = "CONVERSATIONS"
+id = "9e07654f915d4cb4bdd486928bf41b3c"
+preview_id = "fb9b7c18fded46be886b878bd81aba97"
+
+# Durable Objects binding
+[[durable_objects.bindings]]
+name = "TICKET_ASSISTANT"
+class_name = "TicketAssistant"
+script_name = "authieticket-ai-backend"
+
+# Durable Objects migrations
+[[migrations]]
+tag = "v1"
+new_classes = ["TicketAssistant"]
+
+# D1 Database for ticket data
+[[d1_databases]]
+binding = "DB"
+database_name = "authieticket_db"
+database_id = "9071d7a2-7572-4692-b381-1cde991aeccc"
+
+# Note: Workflows are optional and still in beta
+# Uncomment when you're ready to use them:
+# [[workflows]]
+# binding = "WORKFLOWS"
+# name = "ticket-workflows"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+
+[build]
+command = ""
+
+# CORS configuration
+[env.production]
+name = "authieticket-ai-backend-production"

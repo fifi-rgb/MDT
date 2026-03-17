@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Wallet, User, ShoppingCart, Menu, X, Ticket, TrendingUp, Shield, Zap, ChevronRight, Star, MapPin, Calendar, Clock, Heart, Filter, SlidersHorizontal } from 'lucide-react';
+import AIChatAssistant from './components/AIChatAssistant';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -510,6 +511,9 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chat Assistant */}
+      <AIChatAssistant />
     </div>
   );
 }

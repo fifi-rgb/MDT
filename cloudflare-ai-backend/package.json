@@ -1,0 +1,27 @@
+{
+  "name": "authieticket-ai-backend",
+  "version": "1.0.0",
+  "description": "AI-powered backend for Authieticket using Cloudflare Workers AI",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "create-kv": "wrangler kv:namespace create CONVERSATIONS",
+    "create-d1": "wrangler d1 create authieticket_db",
+    "d1-migrations": "wrangler d1 migrations apply authieticket_db"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "ai",
+    "llm",
+    "tickets"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "wrangler": "^4.75.0"
+  }
+}
