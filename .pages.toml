@@ -1,0 +1,12 @@
+# Cloudflare Pages configuration
+[build]
+command = "cd authieticket-frontend && npm install && npm run build"
+cwd = ""
+publish = "authieticket-frontend/build"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[[env.production.env_vars]]
+key = "REACT_APP_AI_API_ENDPOINT"
+value = "https://cf-ai-authieticket.color199432.workers.dev"
