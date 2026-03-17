@@ -1,0 +1,13 @@
+{
+  "name": "authieticket-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy:backend": "cd cloudflare-ai-backend && npm install && npx wrangler deploy",
+    "deploy:frontend": "cd authieticket-frontend && npm install && npm run build"
+  },
+  "workspaces": [
+    "cloudflare-ai-backend",
+    "authieticket-frontend"
+  ]
+}

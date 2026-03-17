@@ -1,5 +1,7 @@
+# Root wrangler.toml - redirects to subdirectory
+# This file tells Cloudflare to use the backend configuration
 name = "authieticket-ai-backend"
-main = "src/index.js"
+main = "cloudflare-ai-backend/src/index.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
 
@@ -29,12 +31,6 @@ new_classes = ["TicketAssistant"]
 binding = "DB"
 database_name = "authieticket_db"
 database_id = "9071d7a2-7572-4692-b381-1cde991aeccc"
-
-# Note: Workflows are optional and still in beta
-# Uncomment when you're ready to use them:
-# [[workflows]]
-# binding = "WORKFLOWS"
-# name = "ticket-workflows"
 
 # Environment variables
 [vars]
